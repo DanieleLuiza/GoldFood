@@ -3,7 +3,9 @@ Sistema de gerenciamento de lanchonetes, pizzaria, bares e restaurantes.
 
 # Conteúdo
 
-## Descrição 
+## Descrição
+Esta é uma aplicação para facilitar o gerenciamento dentro de estabelecimentos do 
+ramo alimentício.
 
 ## Instalação
 Para instalar o projeto, siga os seguintes passos:
@@ -15,5 +17,6 @@ Para iniciar a aplicação, execute os seguintes comandos:
 
 ## Contato
 Nome: Daniele dos Santos
+
 Email: daniele.lemessantos@outlook.com
 
