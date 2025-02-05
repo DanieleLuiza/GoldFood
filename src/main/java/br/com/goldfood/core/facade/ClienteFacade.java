@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 import br.com.goldfood.api.dto.ClienteDTORequest;
 import br.com.goldfood.core.dto.entity.ClienteEntity;
-import br.com.goldfood.core.dto.entity.UsuarioEntity;
 import br.com.goldfood.core.service.ClienteService;
 
 @Component
@@ -21,9 +20,9 @@ public class ClienteFacade {
 		return service.cadastrar(request);
 	}
 
-//	public List<ClienteEntity> listar() {
-//		
-//		return service.listar();
-//	}
+	public List<ClienteEntity> listar() {
+		
+		return service.listar();
+	}
 
 }
