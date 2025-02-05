@@ -7,6 +7,7 @@ import br.com.goldfood.core.dto.entity.UsuarioEntity;
 import br.com.goldfood.core.repository.UsuarioRepository;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Service
 public class UsuarioService {
@@ -40,6 +41,10 @@ public class UsuarioService {
 		
 		return "Salvo com Sucesso";
 		
+	}
+
+	public List<UsuarioEntity> listar() {
+		return repository.findAll();
 	}
 
 }
