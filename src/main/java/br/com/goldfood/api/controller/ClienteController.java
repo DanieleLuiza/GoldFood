@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.goldfood.api.dto.ClienteDTORequest;
 import br.com.goldfood.core.dto.entity.ClienteEntity;
-import br.com.goldfood.core.dto.entity.UsuarioEntity;
 import br.com.goldfood.core.facade.ClienteFacade;
 
 @RestController
@@ -29,10 +28,10 @@ public class ClienteController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(facade.cadastrar(request));
 	}
 	
-//	@GetMapping
-//	public ResponseEntity<List<ClienteEntity>> listarCliente(){
-//		
-//		return ResponseEntity.status(HttpStatus.CREATED).body(facade.listar());
-//	}
+	@GetMapping
+	public ResponseEntity<List<ClienteEntity>> listarCliente(){
+		
+		return ResponseEntity.status(HttpStatus.CREATED).body(facade.listar());
+	}
 
 }
