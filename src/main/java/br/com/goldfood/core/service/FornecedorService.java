@@ -1,5 +1,7 @@
 package br.com.goldfood.core.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,6 +35,10 @@ public class FornecedorService {
 		repository.save(entity);
 		
 		return "Salvo com Sucesso";
+	}
+	
+	public List<FornecedorEntity> listar() {
+		return repository.findAll();
 	}
 
 }
