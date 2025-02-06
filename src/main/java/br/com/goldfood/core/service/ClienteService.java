@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.goldfood.api.dto.ClienteDTORequest;
+import br.com.goldfood.api.dto.ObjetoBuscaRequestDTO;
 import br.com.goldfood.core.dto.entity.ClienteEntity;
 import br.com.goldfood.core.repository.ClienteRepository;
 
@@ -39,6 +40,11 @@ public class ClienteService {
 
 	public List<ClienteEntity> listar() {
 		return repository.findAll();
+	}
+
+	public ClienteEntity listarClienteId(ObjetoBuscaRequestDTO request) {
+		
+		return repository.findByIdCliente(request.getId_busca());
 	}
 
 }

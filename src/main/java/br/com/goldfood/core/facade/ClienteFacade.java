@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import br.com.goldfood.api.dto.ClienteDTORequest;
+import br.com.goldfood.api.dto.ObjetoBuscaRequestDTO;
 import br.com.goldfood.core.dto.entity.ClienteEntity;
 import br.com.goldfood.core.service.ClienteService;
 
@@ -23,6 +24,11 @@ public class ClienteFacade {
 	public List<ClienteEntity> listar() {
 		
 		return service.listar();
+	}
+
+	public ClienteEntity listarClienteId(ObjetoBuscaRequestDTO request) {
+		
+		return service.listarClienteId(request);
 	}
 
 }
