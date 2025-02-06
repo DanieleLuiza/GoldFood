@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import br.com.goldfood.api.dto.ObjetoBuscaRequestDTO;
 import br.com.goldfood.api.dto.ProdutoDTORequest;
 import br.com.goldfood.core.dto.entity.ProdutoEntity;
 import br.com.goldfood.core.service.ProdutoService;
@@ -24,5 +25,11 @@ public class ProdutoFacade {
 	public List<ProdutoEntity> listar() {
 		
 		return service.listar();
+	}
+
+
+	public ProdutoEntity listarProdutoId(ObjetoBuscaRequestDTO request) {
+		
+		return service.listarProdutoId(request);
 	}
 }
