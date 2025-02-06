@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.goldfood.api.dto.FornecedorDTORequest;
+import br.com.goldfood.api.dto.ObjetoBuscaRequestDTO;
 import br.com.goldfood.core.dto.entity.FornecedorEntity;
 import br.com.goldfood.core.facade.FornecedorFacade;
 
@@ -30,6 +31,13 @@ public class FornecedorController {
 	public ResponseEntity<List<FornecedorEntity>> listarFornecedor(){
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(facade.listar());
+	}
+	
+
+	@PostMapping
+	public ResponseEntity<FornecedorEntity> listarFornecedorId(@RequestBody ObjetoBuscaRequestDTO request){
+		
+		return ResponseEntity.status(HttpStatus.CREATED).body(facade.listarFornecedorId(request));
 	}
 
 }
