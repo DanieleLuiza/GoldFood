@@ -2,6 +2,8 @@ package br.com.goldfood.core.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import br.com.goldfood.api.dto.ObjetoBuscaRequestDTO;
 import br.com.goldfood.api.dto.UsuarioDTORequest;
 import br.com.goldfood.core.dto.entity.UsuarioEntity;
 import br.com.goldfood.core.repository.UsuarioRepository;
@@ -45,6 +47,11 @@ public class UsuarioService {
 
 	public List<UsuarioEntity> listar() {
 		return repository.findAll();
+	}
+
+	public UsuarioEntity listarUsuarioId(ObjetoBuscaRequestDTO request) {
+		
+		return repository.findByIdUsuario(request.getId_busca());
 	}
 
 }

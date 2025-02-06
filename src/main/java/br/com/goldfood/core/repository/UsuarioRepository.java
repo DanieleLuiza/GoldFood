@@ -6,4 +6,6 @@ import br.com.goldfood.core.dto.entity.UsuarioEntity;
 
 public interface UsuarioRepository extends JpaRepository<UsuarioEntity, Long>{
 
+	UsuarioEntity findByIdUsuario(Long id_busca);
+
 }

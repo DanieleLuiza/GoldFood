@@ -6,4 +6,6 @@ import br.com.goldfood.core.dto.entity.ClienteEntity;
 
 public interface ClienteRepository extends JpaRepository<ClienteEntity, Long>{
 
+	ClienteEntity findByIdCliente(Long id_busca);
+
 }
