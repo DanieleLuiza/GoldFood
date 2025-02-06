@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.goldfood.api.dto.FornecedorDTORequest;
+import br.com.goldfood.api.dto.ObjetoBuscaRequestDTO;
 import br.com.goldfood.core.dto.entity.FornecedorEntity;
 import br.com.goldfood.core.repository.FornecedorRepository;
 
@@ -39,6 +40,11 @@ public class FornecedorService {
 	
 	public List<FornecedorEntity> listar() {
 		return repository.findAll();
+	}
+
+	public FornecedorEntity listarFornecedorId(ObjetoBuscaRequestDTO request) {
+		
+		return repository.findByIdFornecedor(request.getId_busca());
 	}
 
 }
