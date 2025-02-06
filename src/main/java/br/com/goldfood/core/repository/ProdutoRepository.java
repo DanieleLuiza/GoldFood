@@ -6,4 +6,6 @@ import br.com.goldfood.core.dto.entity.ProdutoEntity;
 
 public interface ProdutoRepository extends JpaRepository<ProdutoEntity, Long>{
 
+	ProdutoEntity findByIdProduto(Long id_busca);
+
 }
